@@ -25,6 +25,9 @@ function App() {
             <li>
               <Link to="/rec">Recs</Link>
             </li>
+            <li>
+              <Link to="/guide">Guide</Link>
+            </li>
           </ul>
         </nav>
 

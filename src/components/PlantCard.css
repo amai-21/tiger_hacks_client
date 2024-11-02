@@ -7,7 +7,7 @@
   background-color: white;
 }
 .rank {
-  color: red;
-  font-style: bolder;
-  font-size: 2rem;
+  color: red !important;
+  font-style: bolder !important;
+  font-size: 2rem !important;
 }

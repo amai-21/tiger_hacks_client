@@ -1,5 +1,7 @@
 import "./RPage.css";
 import PlantCard from "../components/PlantCard";
+import { Plant } from "../Interfaces/Plant";
+import { useNavigate } from "react-router-dom";
 /*   {blogs?.length && blogs.length > 0 ? (
           blogs!.map((blog: BlogUI) => (
             <BlogCard
@@ -14,16 +16,26 @@ import PlantCard from "../components/PlantCard";
         ) : (
           <div className="emptyNote">No Blogs Have Been Posted Yet...</div>
         )}*/
+
 function ReccommendPage() {
+  const navigate = useNavigate();
+  const plant: Plant = {
+    name: "carrot",
+    image: "test.png",
+  };
+  function toGuideRouter(plant: Plant) {
+    console.log("Tomato");
+    navigate("/guide");
+  }
   return (
     <div>
       <div className="title">What We Recommend For Your Garden!</div>
       <div className="container">
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
-        <PlantCard />
+        <PlantCard plant={plant} priority={1} guideRouter={toGuideRouter} />
+        <PlantCard plant={plant} priority={2} guideRouter={toGuideRouter} />
+        <PlantCard plant={plant} priority={3} guideRouter={toGuideRouter} />
+        <PlantCard plant={plant} priority={4} guideRouter={toGuideRouter} />
+        <PlantCard plant={plant} priority={5} guideRouter={toGuideRouter} />
       </div>
     </div>
   );
