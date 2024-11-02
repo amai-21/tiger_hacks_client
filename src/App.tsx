@@ -4,15 +4,16 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
 import LocationPage from "./pages/LocationPage";
-//import StateDropDown from "./components/StateDropDown";
-
 import NavBar from "./components/NavBar";
-import ReccommendPage from "./pages/RecommendPage";
+import RecommendPage from "./pages/RecommendPage";
+import Header from "./components/GuideHeader";
+
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Header />
         <NavBar />
         <nav>
           <ul>
@@ -34,7 +35,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/join" element={<LocationPage />} />
-          <Route path="/rec" element={<ReccommendPage />} />
+          <Route path="/rec" element={<RecommendPage />} />
         </Routes>
       </Router>
     </div>

@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
           <div className="emptyNote">No Blogs Have Been Posted Yet...</div>
         )}*/
 
-function ReccommendPage() {
+function RecommendPage() {
   const navigate = useNavigate();
   const plant: Plant = {
     name: "carrot",
@@ -41,4 +41,4 @@ function ReccommendPage() {
   );
 }
 
-export default ReccommendPage;
+export default RecommendPage;
