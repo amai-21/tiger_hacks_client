@@ -7,7 +7,7 @@ const Header: React.FC = () => {
     return (
         <header className = "header">
             <div>
-                Guide Page
+                How To Garden This Plant
             </div>
         </header>
     );
