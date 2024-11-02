@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
+import LoginPage from "./pages/LocationPage";
 
 function App() {
   return (
