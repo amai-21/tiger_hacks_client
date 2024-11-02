@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 20px;
+}
+.title {
+  font-size: 4rem;
+  font-style: bold;
+}

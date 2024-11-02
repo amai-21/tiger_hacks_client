@@ -6,8 +6,8 @@ import HomePage from "./pages/HomePage";
 import LocationPage from "./pages/LocationPage";
 //import StateDropDown from "./components/StateDropDown";
 
-
 import NavBar from "./components/NavBar";
+import ReccommendPage from "./pages/RecommendPage";
 
 function App() {
   return (
@@ -22,12 +22,16 @@ function App() {
             <li>
               <Link to="/join">Join</Link>
             </li>
+            <li>
+              <Link to="/rec">Recs</Link>
+            </li>
           </ul>
         </nav>
 
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/join" element={<LocationPage />} />
+          <Route path="/rec" element={<ReccommendPage />} />
         </Routes>
       </Router>
     </div>
