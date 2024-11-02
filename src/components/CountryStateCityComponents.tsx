@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Select, { SingleValue } from 'react-select';
 import { Country, State, City } from 'country-state-city';
-//import { Select } from '@mui/material';
+import "../.cssFiles/LocationSelector.css";
+
 
 interface CountryOption {
     label: string;
@@ -61,7 +62,7 @@ const LocationSelector: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className = "dropdown-container">
             <h2>Select Location</h2>
 
             <Select
@@ -69,6 +70,16 @@ const LocationSelector: React.FC = () => {
                 value = {selectedCountry}
                 onChange = {handleCountryChange}
                 placeholder = "Select Country"
+                styles = {{
+                    container: (provided) => ({
+                        ...provided,
+                        width: "300px", 
+                    }),
+                    control: (provided) => ({
+                        ...provided,
+                        minWidth: "150px", 
+                    }),
+                }}
             />
         
 
@@ -78,6 +89,16 @@ const LocationSelector: React.FC = () => {
                 value={selectedState}
                 onChange={handleStateChange}
                 placeholder = "Select State/Province"
+                styles = {{
+                    container: (provided) => ({
+                        ...provided,
+                        width: "300px", 
+                    }),
+                    control: (provided) => ({
+                        ...provided,
+                        minWidth: "150px",
+                    }),
+                }}
                 isDisabled = {!stateOptions.length}
             />
         )}
@@ -88,6 +109,16 @@ const LocationSelector: React.FC = () => {
                 value = {selectedCity}
                 onChange = {handleCityChange}
                 placeholder = "Select City"
+                styles = {{
+                    container: (provided) => ({
+                        ...provided,
+                        width: "300px",
+                    }),
+                    control: (provided) => ({
+                        ...provided,
+                        minWidth: "150px",
+                    }),
+                }}
                 isDisabled = {!cityOptions.length}
             />
         )}
