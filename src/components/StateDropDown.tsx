@@ -14,7 +14,7 @@ const states: string[] = [
 ];
 
 
-export const StateDropdown: React.FC = () => {
+const StateDropDown: React.FC = () => {
     const [selectedState, setSelectedState] = useState<string>("");
 
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -36,3 +36,5 @@ export const StateDropdown: React.FC = () => {
         </div>
     );
 };
+
+export default StateDropDown;
