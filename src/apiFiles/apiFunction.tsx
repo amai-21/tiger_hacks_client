@@ -15,7 +15,7 @@ interface cropsInformation {
     //Personal crops
     image: string,
     name: string,
-    waterCycle: string,
+    waterCycle: WaterCycleStage[],
     guide: string,
     specialTool: string
         //Dependent on climate and location for user.
