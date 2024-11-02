@@ -1,4 +1,4 @@
-import axios from 'axios';
+
 
 interface WaterCycleStage {
     stage: string, // Name for the watering stage, i.e., "Bi-weekly."
@@ -12,9 +12,12 @@ interface WaterCycleStage {
 
 // Crops interface
 interface cropsInformation {
+    //Personal crops
     image: string,
     name: string,
     waterCycle: string,
     guide: string,
+    specialTool: string
+        //Dependent on climate and location for user.
 
 }
