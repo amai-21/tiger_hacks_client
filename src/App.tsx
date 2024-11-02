@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
 import LocationPage from "./pages/LocationPage";
-import StateDropDown from "./components/StateDropDown";
+//import StateDropDown from "./components/StateDropDown";
+
 
 import NavBar from "./components/NavBar";
 

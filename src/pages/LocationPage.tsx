@@ -1,7 +1,10 @@
+import LocationSelector from "../components/CountryStateCityComponents";
+
 function LocationPage() {
   return (
     <div>
-      <div>Hello User</div>
+      <div>Location Page</div>
+      <LocationSelector></LocationSelector>
     </div>
   );
 }
