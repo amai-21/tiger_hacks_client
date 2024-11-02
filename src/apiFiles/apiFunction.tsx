@@ -1,6 +1,6 @@
 
 
-interface WaterCycleStage {
+export interface WaterCycleStage {
     stage: string, // Name for the watering stage, i.e., "Bi-weekly."
     intervalDays: number, // Interval in days, (i.e., 14 for two weeks).
     lastWatered: Date, // Date of the last watering

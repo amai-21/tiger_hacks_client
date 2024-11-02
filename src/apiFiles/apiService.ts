@@ -1,3 +1,5 @@
+// Test to see if the client side is successfully communuicating with the server side.
+
 import axios from 'axios';
 
 interface ServerData { // Define the type of data expected from the server.
