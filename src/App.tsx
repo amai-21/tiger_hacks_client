@@ -5,7 +5,7 @@ import "./App.css";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LocationPage";
 
-import StateDropdown from './components/StateDropdown.tsx';
+import StateDropDown from './components/StateDropDown';
 
 function App() {
   return (
