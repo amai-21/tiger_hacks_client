@@ -6,12 +6,15 @@
 }
 
 body {
+    color: #ffffff;
     background: rgb(5, 65, 5);
-    color: white;
 }
 
 .home {
     height: 100vh;
+    background: url(home_img/home_bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -29,7 +32,8 @@ body {
 
 .home-content h3 {
     font-size: 32px;
-    font-weight: 700;color: aqua;
+    font-weight: 700;
+    color: #1eec17;
 }
 
 .home-content p {
@@ -51,11 +55,11 @@ body {
     align-items: center;
     width: 150px;
     height: 100%;
-    background: #00abf0;
-    border: 2px solid #00abf0;
+    background: #1eec17;
+    border: 2px solid #1eec17;
     border-radius: 8px;
     font-size: 19px;
-    color: rgb(0, 0, 0);
+    color: #074203;
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
@@ -64,17 +68,21 @@ body {
     transition: .5s;
 }
 
+.btn-box a:hover {
+    color: #1eec17;
+}
+
 .btn-box a:nth-child(2) {
    background: transparent;
-   color: #00abf0; 
+   color: #1eec17; 
 }
 
 .btn-box a:nth-child(2):hover {
-    color: black;
+    color: #074203;
 }
 
 .btn-box a:nth-child(2)::before {
-    background: #00abf0;
+    background: #1eec17;
 }
 
 .btn-box a::before {
@@ -84,7 +92,7 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    background: greenyellow;
+    background: #085803;
     z-index: -1;
     transition: .5s;
 }
