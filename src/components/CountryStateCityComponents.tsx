@@ -109,9 +109,9 @@ const LocationSelector: React.FC<RecProps> = (props: RecProps) => {
           styles={{
             container: (provided) => ({
               ...provided,
-              width: "650px",
+              width: "600px",
 
-              fontSize: 50,
+              fontSize: 40,
             }),
             control: (provided) => ({
               ...provided,
@@ -139,9 +139,9 @@ const LocationSelector: React.FC<RecProps> = (props: RecProps) => {
           styles={{
             container: (provided) => ({
               ...provided,
-              width: "650px",
+              width: "600px",
 
-              fontSize: 50,
+              fontSize: 40,
             }),
             control: (provided) => ({
               ...provided,
@@ -170,9 +170,9 @@ const LocationSelector: React.FC<RecProps> = (props: RecProps) => {
           styles={{
             container: (provided) => ({
               ...provided,
-              width: "650px",
+              width: "600px",
               color: "black",
-              fontSize: 50,
+              fontSize: 40,
             }),
             control: (provided) => ({
               ...provided,
