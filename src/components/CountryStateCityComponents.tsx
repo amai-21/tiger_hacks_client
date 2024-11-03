@@ -62,6 +62,7 @@ const LocationSelector: React.FC = () => {
     };
 
     return (
+        <div className = "locationBody">
         <div className = "dropdown-container">
             <h2>Select Location</h2>
 
@@ -78,6 +79,23 @@ const LocationSelector: React.FC = () => {
                     control: (provided) => ({
                         ...provided,
                         minWidth: "150px", 
+                    }),
+                    singleValue: (provided) => ({
+                        ...provided,
+                        color: "black",
+                    }),
+                    input: (provided) => ({
+                        ...provided,
+                        color: "black",
+                    }),
+                    placeholder: (provided) => ({
+                        ...provided,
+                        color: "gray",
+                    }),
+                    option: (provided, state) => ({
+                        ...provided,
+                        color: state.isSelected ? "white" : "black",
+                        backgroundColor: state.isSelected ? "blue" : "white",
                     }),
                 }}
             />
@@ -98,7 +116,24 @@ const LocationSelector: React.FC = () => {
                         ...provided,
                         minWidth: "150px",
                     }),
-                }}
+                singleValue: (provided) => ({
+                    ...provided,
+                    color: "black",
+                }),
+                input: (provided) => ({
+                    ...provided,
+                    color: "black",
+                }),
+                placeholder: (provided) => ({
+                    ...provided,
+                    color: "gray",
+                }),
+                option: (provided, state) => ({
+                    ...provided,
+                    color: state.isSelected ? "white" : "black",
+                    backgroundColor: state.isSelected ? "blue" : "white",
+                }),
+            }}
                 isDisabled = {!stateOptions.length}
             />
         )}
@@ -118,6 +153,23 @@ const LocationSelector: React.FC = () => {
                         ...provided,
                         minWidth: "150px",
                     }),
+                    singleValue: (provided) => ({
+                        ...provided,
+                        color: "black",
+                    }),
+                    input: (provided) => ({
+                        ...provided,
+                        color: "black",
+                    }),
+                    placeholder: (provided) => ({
+                        ...provided,
+                        color: "gray",
+                    }),
+                    option: (provided, state) => ({
+                        ...provided,
+                        color: state.isSelected ? "white" : "black",
+                        backgroundColor: state.isSelected ? "blue" : "white",
+                    }),
                 }}
                 isDisabled = {!cityOptions.length}
             />
@@ -129,6 +181,7 @@ const LocationSelector: React.FC = () => {
             </p>
         )}
     </div>
+</div>
     );
 
 };

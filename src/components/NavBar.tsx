@@ -6,7 +6,7 @@ import "./NavBar.css";
 export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 0 }}>
-      <AppBar sx={{ backgroundColor: "#14313E" }} position="static">
+      <AppBar sx={{ backgroundColor: "transparent" }} position="static">
         <Toolbar>
           <button className="loginBtn">Join</button>
         </Toolbar>

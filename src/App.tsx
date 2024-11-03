@@ -6,36 +6,20 @@ import HomePage from "./pages/HomePage";
 import LocationPage from "./pages/LocationPage";
 import NavBar from "./components/NavBar";
 import RecommendPage from "./pages/RecommendPage";
-import Header from "./components/GuideHeader";
-
+import Header from "./components/SpecializedCropsPage";
+import LoginForm from "./pages/LoginPage";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
-        <NavBar />
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/join">Join</Link>
-            </li>
-            <li>
-              <Link to="/rec">Recs</Link>
-            </li>
-            <li>
-              <Link to="/guide">Guide</Link>
-            </li>
-          </ul>
-        </nav>
+        
 
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/join" element={<LocationPage />} />
           <Route path="/rec" element={<RecommendPage />} />
+          <Route path = "/login" element = {<LoginForm />} />
         </Routes>
       </Router>
     </div>
