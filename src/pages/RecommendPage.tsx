@@ -1,7 +1,10 @@
 import "./RPage.css";
 import PlantCard from "../components/PlantCard";
 import { Plant } from "../Interfaces/Plant";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Region } from "../Interfaces/Region";
 /*   {blogs?.length && blogs.length > 0 ? (
           blogs!.map((blog: BlogUI) => (
             <BlogCard
@@ -19,23 +22,47 @@ import { useNavigate } from "react-router-dom";
 
 function RecommendPage() {
   const navigate = useNavigate();
-  const plant: Plant = {
-    name: "carrot",
-    image: "test.png",
-  };
+  const location = useLocation();
   function toGuideRouter(plant: Plant) {
-    console.log("Tomato");
     navigate("/guide");
   }
+  const [plants, setPlants] = useState<Plant[]>([]);
+
+  const fetchPlants = async (region: Region) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/plants",
+        region
+      );
+      setPlants(response.data);
+    } catch (error) {
+      console.error("Error fetching recommended plants:", error);
+    }
+  };
+
+  useEffect(() => {
+    if (plants.length === 0) {
+      const region: Region = location.state || {};
+      console.log(region);
+      fetchPlants(region);
+    }
+  }, []);
+
   return (
     <div>
       <div className="title">What We Recommend For Your Garden!</div>
       <div className="container">
-        <PlantCard plant={plant} priority={1} guideRouter={toGuideRouter} />
-        <PlantCard plant={plant} priority={2} guideRouter={toGuideRouter} />
-        <PlantCard plant={plant} priority={3} guideRouter={toGuideRouter} />
-        <PlantCard plant={plant} priority={4} guideRouter={toGuideRouter} />
-        <PlantCard plant={plant} priority={5} guideRouter={toGuideRouter} />
+        {plants?.length && plants.length > 0 ? (
+          plants!.map((plant: Plant, index) => (
+            <PlantCard
+              plant={plant}
+              priority={index + 1}
+              guideRouter={toGuideRouter}
+            />
+          ))
+        ) : (
+          <div></div>
+        )}
       </div>
     </div>
   );

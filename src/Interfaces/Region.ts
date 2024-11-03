@@ -1,5 +1,5 @@
 export interface Region {
-  country: string;
-  state: string;
-  city: string;
+  country: string | undefined;
+  state: string | undefined;
+  city: string | undefined;
 }

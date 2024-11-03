@@ -53,21 +53,7 @@ function PlantCard(props: PlantProps) {
           alt=""
         />
 
-        <CardContent orientation="horizontal">
-          <Button
-            variant="solid"
-            size="md"
-            onClick={() => toGuideRouter(props.plant)}
-            sx={{
-              ml: "auto",
-              alignSelf: "center",
-              fontWeight: 800,
-              backgroundColor: "#65A5C5",
-            }}
-          >
-            Select
-          </Button>
-        </CardContent>
+        <CardContent orientation="horizontal"></CardContent>
       </div>
     </Card>
   );
