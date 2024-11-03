@@ -18,7 +18,7 @@ function RecommendPage() {
 
   const fetchPlants = async (region: Region) => {
     try {
-      const response = await axios.post(
+      const response = await axios.post<Plant[]>(
         "http://localhost:5000/api/plants",
         region
       );
