@@ -6,6 +6,10 @@
   margin: 20px;
 }
 .title {
-  font-size: 4rem;
+  font-size: 5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-style: bold;
+  color: white;
+  padding-top: 100px;
 }

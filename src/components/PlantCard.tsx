@@ -16,46 +16,48 @@ function PlantCard(props: PlantProps) {
     props.guideRouter(plant);
   }
   return (
-    <Card
-      sx={{
-        width: 275,
-        height: 300,
-        marginLeft: 3,
-        marginBottom: 3,
-        borderWidth: 6,
-        borderColor: "#65A5C5",
-        backgroundColor: "#114A6E",
-        boxShadow: "6px 6px 8px rgba(0, 0, 0, 0.2)",
-      }}
-      className="card"
-    >
-      <div className="borderContent">
-        <div>
-          <Typography
-            sx={{ fontStyle: "bold", color: "white", fontSize: 30 }}
-            level="title-lg"
-          >
-            {props.plant.name}
-          </Typography>
-          <Typography
-            className="rank"
-            color="neutral"
-            sx={{ position: "absolute", top: "0.3rem", right: "0.5rem" }}
-          >
-            {props.priority}
-          </Typography>
+    <div>
+      <Card
+        sx={{
+          width: 350,
+          height: 350,
+          marginLeft: 3,
+          marginBottom: 3,
+          borderWidth: 6,
+          borderColor: "#65A5C5",
+          backgroundColor: "#114A6E",
+          boxShadow: "6px 6px 8px rgba(0, 0, 0, 0.2)",
+        }}
+        className="card"
+      >
+        <div className="borderContent">
+          <div style={{}}>
+            <Typography
+              sx={{ fontStyle: "bold", color: "white", fontSize: 30 }}
+              level="title-lg"
+            >
+              {props.plant.name}
+            </Typography>
+            <Typography
+              className="rank"
+              color="neutral"
+              sx={{ position: "absolute", top: "0.3rem", right: "0.5rem" }}
+            >
+              {props.priority}
+            </Typography>
+          </div>
+
+          <img
+            className="img"
+            src={require(`/src/images/${props.plant.image}`)}
+            loading="lazy"
+            alt=""
+          />
+
+          <CardContent orientation="horizontal"></CardContent>
         </div>
-
-        <img
-          className="img"
-          src={require(`/src/images/${props.plant.image}`)}
-          loading="lazy"
-          alt=""
-        />
-
-        <CardContent orientation="horizontal"></CardContent>
-      </div>
-    </Card>
+      </Card>
+    </div>
   );
 }
 export default PlantCard;

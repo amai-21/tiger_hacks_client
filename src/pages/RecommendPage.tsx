@@ -5,20 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Region } from "../Interfaces/Region";
-/*   {blogs?.length && blogs.length > 0 ? (
-          blogs!.map((blog: BlogUI) => (
-            <BlogCard
-              desc={DescGenerator(blog.content)}
-              viewMode={activateViewModal}
-              editMode={BlogEditor}
-              key={blog._id}
-              Blog={blog}
-              US_date={DateToString(blog.posted)}
-            />
-          ))
-        ) : (
-          <div className="emptyNote">No Blogs Have Been Posted Yet...</div>
-        )}*/
+import "./imageBack.css";
 
 function RecommendPage() {
   const navigate = useNavigate();
@@ -49,7 +36,7 @@ function RecommendPage() {
   }, []);
 
   return (
-    <div>
+    <div className="bg">
       <div className="title">What We Recommend For Your Garden!</div>
       <div className="container">
         {plants?.length && plants.length > 0 ? (
