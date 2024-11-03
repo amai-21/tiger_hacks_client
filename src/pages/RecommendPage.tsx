@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Region } from "../Interfaces/Region";
 import "./imageBack.css";
+import { blue } from "@mui/material/colors";
 
 function RecommendPage() {
   const navigate = useNavigate();
@@ -38,6 +39,9 @@ function RecommendPage() {
   return (
     <div className="bg">
       <div className="title">What We Recommend For Your Garden!</div>
+      <a href="/" style={{ fontSize: 40, color: "white" }}>
+        Click Here To Play Again
+      </a>
       <div className="container">
         {plants?.length && plants.length > 0 ? (
           plants!.map((plant: Plant, index) => (
